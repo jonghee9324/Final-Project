@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textview11"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:text="WithPet"
+            android:textSize="35dp"
+            android:fontFamily="@font/bazzi"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="594dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="작성자"
+                android:fontFamily="@font/bazzi"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/walk_nickname"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="@font/bazzi"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/mainBtn_menu"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|center_vertical"
+                android:layout_weight="1"
+                android:backgroundTint="@color/text"
+                android:gravity="fill" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:text="제목"
+                android:fontFamily="@font/bazzi"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/walkTv_title"
+                android:fontFamily="@font/bazzi"
+                android:layout_width="320dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:textFontWeight="1"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_tmap"
+            android:fontFamily="@font/bazzi"
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bazzi"
+            android:textSize="20sp"
+            android:text="글내용" />
+
+        <TextView
+            android:id="@+id/walkTv_content"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:paddingTop="10dp"
+            android:fontFamily="@font/bazzi"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="62dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/bazzi"
+                android:textSize="20sp"
+                android:paddingTop = "15dp"
+                android:text="댓글" />
+
+
+            <EditText
+                android:id="@+id/walkreplyTv_add"
+                android:layout_width="269dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/bazzi"
+                android:hint="댓글 작성" />
+
+            <Button
+                android:id="@+id/walkreplyBtn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/bazzi"
+                android:text="작성"
+                android:textColor="#ffff"
+                android:background="@drawable/diary_add_btn"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/walkrv_reply"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
